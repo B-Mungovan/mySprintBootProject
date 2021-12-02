@@ -21,9 +21,6 @@ public Poke createPokemon(Poke poke) {
 }
 
 
-public List<Poke> getAllPokemon() {
-	return this.repo.findAll();
-}
 public Poke getById(Integer id) {
 	Optional<Poke> pokeToFind = this.repo.findById(id);
 	Poke foundPoke = pokeToFind.get();
