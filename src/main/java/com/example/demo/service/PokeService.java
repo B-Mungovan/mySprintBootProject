@@ -2,7 +2,6 @@ package com.example.demo.service;
 
 import java.util.List;
 import java.util.Optional;
-
 import org.springframework.stereotype.Service;
 
 import com.example.demo.data.Poke;
@@ -21,6 +20,7 @@ public Poke createPokemon(Poke poke) {
 	
 }
 
+
 public List<Poke> getAllPokemon() {
 	return this.repo.findAll();
 }
@@ -30,6 +30,11 @@ public Poke getById(Integer id) {
 	return foundPoke;
 
 }
+
+public List<Poke> getAllPokemon() {
+	return this.repo.findAll();
+}
+
 
 
 }

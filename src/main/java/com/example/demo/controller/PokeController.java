@@ -40,12 +40,11 @@ public class PokeController {
     ResponseEntity<List<Poke>> response = new ResponseEntity<List<Poke>>(this.service.getAllPokemon(), HttpStatus.OK);
     return response;
     }
+
 	@GetMapping("{id}")
 	public ResponseEntity<Poke> getById(@PathVariable Integer id) {
 		return new ResponseEntity<Poke>(this.service.getById(id), HttpStatus.OK);
 	}
-
-	
-	
 }
+
 
