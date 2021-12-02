@@ -1,30 +1,28 @@
 package com.example.demo.data;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Poke {
-	private static int ID_COUNTER = 0;
+
+
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+    
 	private int id;
 	private String pokeName;
 	private int pokeLevel;
 	private String pokeType;
 	private String pokeNature;
 
+   
 	public Poke() {
 	}
-	public Poke(String pokeName, int pokeLevel, String pokeType, String pokeNature) {
-		super();
-
-		this.id = ID_COUNTER++;
-		this.pokeLevel = pokeLevel;
-		this.pokeName = pokeName;
-		this.pokeNature = pokeNature;
-		this.pokeType = pokeType;
-		}
+	
 		public Poke(int id, String pokeName, int pokeLevel, String pokeType, String pokeNature) {
 		super();
 
@@ -32,9 +30,9 @@ public class Poke {
 		this.pokeLevel = pokeLevel;
 		this.pokeName = pokeName;
 		this.pokeNature = pokeNature;
-		this.pokeType = pokeType;
-
-		}
+		this.pokeType = pokeType;	
+}
+	
 		public int getId() {
 			return id;
 		}
@@ -65,5 +63,4 @@ public class Poke {
 		public void setPokeNature(String pokeNature) {
 			this.pokeNature = pokeNature;
 		}
-		
 }
