@@ -31,7 +31,18 @@ public Poke getById(Integer id) {
 public List<Poke> getAllPokemon() {
 	return this.repo.findAll();
 }
-
+public Poke updatePoke(Poke poke, Integer id) {
+	Optional<Poke> pokeToFind = this.repo.findById(id);
+	Poke pokeToUpdate = pokeToFind.get();
+	
+	pokeToUpdate.setPokeLevel(poke.getPokeLevel());
+	pokeToUpdate.setPokeName(poke.getPokeName());
+	pokeToUpdate.setPokeNature(poke.getPokeNature());
+	pokeToUpdate.setPokeType(poke.getPokeType());
+	
+	return this.repo.save(pokeToUpdate);
+	
+}
 
 
 }
