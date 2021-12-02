@@ -29,4 +29,16 @@ public class PokeController {
 		ResponseEntity<Poke> response = new ResponseEntity<Poke>(this.service.createPokemon(poke), HttpStatus.CREATED);
 		return response;
 	}
+	
+	
+	
+	
+	
+	
+	
+	
 }
+
+
+
+

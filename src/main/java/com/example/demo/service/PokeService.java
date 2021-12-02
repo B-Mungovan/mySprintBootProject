@@ -17,4 +17,9 @@ public Poke createPokemon(Poke poke) {
 	return this.repo.save(poke);
 	
 }
+
+
+
+
+
 }
