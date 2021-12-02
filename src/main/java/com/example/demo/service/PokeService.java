@@ -43,6 +43,10 @@ public Poke updatePoke(Poke poke, Integer id) {
 	return this.repo.save(pokeToUpdate);
 	
 }
-
+public boolean deletePokemon(Integer id) {
+	this.repo.deleteById(id);
+	boolean exists = this.repo.existsById(id);
+	return !exists;
+}
 
 }
