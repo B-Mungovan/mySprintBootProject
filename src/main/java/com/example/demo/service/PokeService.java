@@ -1,5 +1,7 @@
 package com.example.demo.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.example.demo.data.Poke;
@@ -17,4 +19,10 @@ public Poke createPokemon(Poke poke) {
 	return this.repo.save(poke);
 	
 }
+public List<Poke> getAllPokemon() {
+	return this.repo.findAll();
+}
+
+
+
 }

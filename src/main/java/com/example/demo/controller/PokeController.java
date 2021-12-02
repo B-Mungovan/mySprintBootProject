@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,4 +30,13 @@ public class PokeController {
 		ResponseEntity<Poke> response = new ResponseEntity<Poke>(this.service.createPokemon(poke), HttpStatus.CREATED);
 		return response;
 	}
+	@GetMapping("/getAll")
+	public ResponseEntity<Poke> getAllPokemon() {
+		return new ResponseEntity<Poke>((Poke) this.service.getAllPokemon(), (HttpStatus.OK));
+
+	}
+	
+	
+	
+	
 }
