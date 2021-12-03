@@ -13,17 +13,16 @@ public class Poke {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
     
-	private int id;
-	private String pokeName;
+	private Integer id;
 	private int pokeLevel;
-	private String pokeType;
+	private String pokeName;
 	private String pokeNature;
-
+	private String pokeType;
    
 	public Poke() {
 	}
 	
-		public Poke(int id, String pokeName, int pokeLevel, String pokeType, String pokeNature) {
+	public Poke( Integer id, int pokeLevel, String pokeName, String pokeNature,String pokeType) {
 		super();
 
 		this.id = id;
@@ -32,35 +31,45 @@ public class Poke {
 		this.pokeNature = pokeNature;
 		this.pokeType = pokeType;	
 }
-	
-		public int getId() {
-			return id;
-		}
-		public void setId(int id) {
-			this.id = id;
-		}
-		public String getPokeName() {
-			return pokeName;
-		}
-		public void setPokeName(String pokeName) {
-			this.pokeName = pokeName;
-		}
-		public int getPokeLevel() {
-			return pokeLevel;
-		}
-		public void setPokeLevel(int pokeLevel) {
-			this.pokeLevel = pokeLevel;
-		}
-		public String getPokeType() {
-			return pokeType;
-		}
-		public void setPokeType(String pokeType) {
-			this.pokeType = pokeType;
-		}
-		public String getPokeNature() {
-			return pokeNature;
-		}
-		public void setPokeNature(String pokeNature) {
-			this.pokeNature = pokeNature;
-		}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public int getPokeLevel() {
+		return pokeLevel;
+	}
+
+	public void setPokeLevel(int pokeLevel) {
+		this.pokeLevel = pokeLevel;
+	}
+
+	public String getPokeName() {
+		return pokeName;
+	}
+
+	public void setPokeName(String pokeName) {
+		this.pokeName = pokeName;
+	}
+
+	public String getPokeNature() {
+		return pokeNature;
+	}
+
+	public void setPokeNature(String pokeNature) {
+		this.pokeNature = pokeNature;
+	}
+
+	public String getPokeType() {
+		return pokeType;
+	}
+
+	public void setPokeType(String pokeType) {
+		this.pokeType = pokeType;
+	}
 }
+		
