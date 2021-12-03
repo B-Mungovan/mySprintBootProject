@@ -18,6 +18,10 @@ Moving forward I will make sure to revise the Git terminal and learn the command
 
 LINK to Jira Board https://qatestbm.atlassian.net/jira/software/projects/SBA/boards/2/roadmap?selectedIssue=SBA-7
 
+
+Provided below are the screenshots of all the different functions being executed.
+
+
 Here is my Create function.
 
 <img src="project%20ss/create%20method%20H2.PNG" width="550">
